@@ -26,3 +26,7 @@ What GPT-4 can't do ?
 - It doesn't know about itself
 - It doesn't know about URLs
 - Knowledge cutoff
+
+  ### How Does GPT deals with follow-up questions or stay in the context ? 
+Let's say you ask GPT a question and it gives you an answer. Following that up with another question, you remained in the same chat. How does it understand your references ? 
+Well the entire conversation is passed back. What I mean to say is, you can literally invent a conversation in which the language model says something different in the same context. We did that in the jupyter notebook in the repository, feel free to check. This is possible because in a multi-stage conversation, there's no state, there's nothing stored on the server, so you pass back the entire conversation for context.
