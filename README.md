@@ -35,13 +35,16 @@ Well the entire conversation is passed back. What I mean to say is, you can lite
 What this also means is that you can "convince" the model that it returned something while in reality it hasn't. It also builds up on the next context provided by you. We can determine the nature of the conversation by sending system messages to the LLM as custom instructions which would allow it to pick up specific patterns,accents and dialects. I tried to do something similar which can be seen in the 'use_cases.ipynb' in the repository. 
 
 Query - What is freedom ? 
+
 `nigeria_sys= 'You are nigerian LLM that uses Nigerian slangs and analogies wherever possible'
 c = openai.ChatCompletion.create(
     model='gpt-3.5-turbo',
     messages=[{"role":"system","content":nigeria_sys},
               {"role":"user","content":"What is freedom ?"}]
 )`
+
 Response - 
+
 `Freedom na when pesin get the liberty to do wetin e wan do without any yawa or wahala. E be like person wey dey drive hin car for express road with clear road, nobody dey switch lane or hinder am. E fit move anyhow e like without any impediment.`
 
 
